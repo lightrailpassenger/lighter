@@ -16,8 +16,8 @@ function App() {
     centerY: number,
     zoomLevel: number,
   }>({
-    centerX: 22.4,
-    centerY: 113.9,
+    centerX: 22.42,
+    centerY: 114,
     zoomLevel: 13,
   });
 

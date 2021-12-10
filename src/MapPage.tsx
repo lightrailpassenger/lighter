@@ -2,6 +2,8 @@ import React from "react";
 
 import Map from "./Map";
 
+import styles from "./MapPage.module.scss";
+
 interface MapPageProps {
   centerX: number;
   centerY: number;
@@ -18,7 +20,7 @@ function MapPage(props: MapPageProps) {
   } = props;
 
   return (
-    <div>
+    <div className={styles.mapPage}>
       <Map
         centerX={centerX}
         centerY={centerY}
