@@ -5,7 +5,7 @@
 
   searchParams.append(
     'data',
-    "node(22.35, 113.9, 22.46, 114.1)['brand:en'='Light Rail']; out;"
+    "node(22.35, 113.9, 22.5, 114.1)['brand:en'='Light Rail']; out;"
   );
 
   const [
@@ -30,14 +30,14 @@
   const geoDataObject = JSON.parse(xml2js.xml2json(geoDataText, { compact: true }));
   const geoDataObjectTable = geoDataObject.osm.node.map((node) => {
     return [
-      node._attributes.lat,
-      node._attributes.lon,
+      Number(node._attributes.lat),
+      Number(node._attributes.lon),
       node.tag.find((tag) => (tag._attributes.k === "name:en"))._attributes.v,
     ];
   });
 
   const routeTable = [];
-  for (let routeRow of routeDataText.split("\n").slice(1)) {
+  for (let routeRow of routeDataText.split("\n").slice(1, -1)) {
     routeTable.push(routeRow.split(",").map((entry) => {
       if (`${entry[0]}${entry[entry.length - 1]}` === '""') {
         return entry.slice(1, -1);

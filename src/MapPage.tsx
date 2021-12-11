@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useCallback } from "react";
+
+import { useNavigate } from "react-router-dom";
 
 import Map from "./Map";
 
@@ -8,6 +10,11 @@ interface MapPageProps {
   centerX: number;
   centerY: number;
   zoomLevel: number;
+  markers: Array<{
+    id: string,
+    lat: number,
+    lon: number,
+  }>;
   onViewChange(centerX: number, centerY: number, zoomLevel: number): void;
 }
 
@@ -16,8 +23,14 @@ function MapPage(props: MapPageProps) {
     centerX,
     centerY,
     zoomLevel,
+    markers,
     onViewChange
   } = props;
+
+  const navigate = useNavigate();
+  const handleMarkerClick = useCallback((id: string) => {
+    navigate(`/result/${id}`);
+  }, [navigate]);
 
   return (
     <div className={styles.mapPage}>
@@ -25,6 +38,8 @@ function MapPage(props: MapPageProps) {
         centerX={centerX}
         centerY={centerY}
         zoomLevel={zoomLevel}
+        markers={markers}
+        onMarkerClick={handleMarkerClick}
         onViewChange={onViewChange}
       />
     </div>

@@ -1,24 +1,24 @@
 .row {
   display: flex;
-  height: 30px;
+  height: 40px;
 }
 
 .platformId {
-  flex: 0 0 20px;
+  flex: 0 0 80px;
 }
 
 .route {
-  flex: 0 0 40px;
+  flex: 0 0 80px;
 }
 
 .destination {
-  flex: 1 1 50px;
+  flex: 1 1 80px;
 }
 
 .trainLength {
-  flex: 0 0 10px;
+  flex: 0 0 80px;
 }
 
 .time {
-  flex: 0 0 100px;
+  flex: 0 0 70px;
 }

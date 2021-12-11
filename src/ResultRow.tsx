@@ -3,10 +3,10 @@ import React from "react";
 import styles from "./ResultRow.module.scss";
 
 interface ResultRowProps {
-  platformId: number;
+  platformId: string | number;
   route: string;
   destination: string;
-  trainLength: number;
+  trainLength: string | number;
   time: string;
 }
 

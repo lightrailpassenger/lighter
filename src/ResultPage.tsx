@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
 import ResultRow from "./ResultRow";
 
 import etaResultSchema, { ETAResultType } from "./schemas/ETAResultSchema";
+
+import routeData from "./route_data.json";
 
 import styles from "./ResultPage.module.scss";
 
@@ -18,7 +20,7 @@ function ResultPage() {
   useEffect(() => {
     let isIgnored = false;
     (async () => {
-      const res = await fetch(`${DATA_ENDPOINT}${stationId}`, { method: 'GET' });
+      const res = await fetch(`${DATA_ENDPOINT}${stationId}`, { mode: 'cors', method: 'GET' });
       const result = await res.json();
       const validatedResult = await etaResultSchema.validate(result);
 
@@ -32,12 +34,27 @@ function ResultPage() {
     };
   }, [stationId]);
 
+  const stationName = useMemo(() => {
+    const station = routeData.find(({ id }) => (id === stationId));
+    return station ? `${station.nameEn} ${station.nameCh}` : '';
+  }, [stationId]);
+
   return (
-    <div className={styles.page}>{
+    <div className={styles.page}>
+      <h3 className={styles.stationName}>{stationName}</h3>
+      <ResultRow
+        platformId="Platform"
+        trainLength="# Trains(s)"
+        route="Route"
+        time="Time of arrivals"
+        destination="Destination"
+      />
+      {
       result &&
       result.platform_list.flatMap(({ platform_id, route_list }) => {
         return route_list.flatMap(({ train_length, route_no, time_en, dest_en }) => (
           <ResultRow
+            key={`${platform_id}-${train_length}-${route_no}-${time_en}-${dest_en}`}
             platformId={platform_id}
             trainLength={train_length}
             route={route_no}

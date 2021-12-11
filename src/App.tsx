@@ -8,6 +8,8 @@ import Navigation from "./Navigation";
 import ResultPage from "./ResultPage";
 import StationListPage from "./StationListPage";
 
+import routeData from "./route_data.json";
+
 import styles from "./App.module.scss";
 
 function App() {
@@ -40,7 +42,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={
-            <MapPage {...mapView} onViewChange={handleViewChange} />
+            <MapPage {...mapView} markers={routeData} onViewChange={handleViewChange} />
           } />
           <Route path="/list" element={
             <StationListPage />
