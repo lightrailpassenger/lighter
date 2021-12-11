@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/lighter/static/css/main.e0af2140.chunk.css",
+    "main.js": "/lighter/static/js/main.565e670d.chunk.js",
+    "main.js.map": "/lighter/static/js/main.565e670d.chunk.js.map",
+    "runtime-main.js": "/lighter/static/js/runtime-main.1eb66b9b.js",
+    "runtime-main.js.map": "/lighter/static/js/runtime-main.1eb66b9b.js.map",
+    "static/js/2.38819c16.chunk.js": "/lighter/static/js/2.38819c16.chunk.js",
+    "static/js/2.38819c16.chunk.js.map": "/lighter/static/js/2.38819c16.chunk.js.map",
+    "index.html": "/lighter/index.html",
+    "static/css/main.e0af2140.chunk.css.map": "/lighter/static/css/main.e0af2140.chunk.css.map",
+    "static/js/2.38819c16.chunk.js.LICENSE.txt": "/lighter/static/js/2.38819c16.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1eb66b9b.js",
+    "static/js/2.38819c16.chunk.js",
+    "static/css/main.e0af2140.chunk.css",
+    "static/js/main.565e670d.chunk.js"
+  ]
+}
