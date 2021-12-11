@@ -20,12 +20,16 @@ function ResultPage() {
   useEffect(() => {
     let isIgnored = false;
     (async () => {
-      const res = await fetch(`${DATA_ENDPOINT}${stationId}`, { mode: 'cors', method: 'GET' });
-      const result = await res.json();
-      const validatedResult = await etaResultSchema.validate(result);
+      try {
+        const res = await fetch(`${DATA_ENDPOINT}${stationId}`, { mode: 'cors', method: 'GET' });
+        const result = await res.json();
+        const validatedResult = await etaResultSchema.validate(result);
 
-      if (!isIgnored) {
-        setResult(validatedResult);
+        if (!isIgnored) {
+          setResult(validatedResult);
+        }
+      } catch {
+        window.location.reload();
       }
     })();
 
