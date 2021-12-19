@@ -48,7 +48,7 @@ function ResultPage() {
       <h3 className={styles.stationName}>{stationName}</h3>
       <ResultRow
         platformId="Platform"
-        trainLength="# Trains(s)"
+        trainLength=""
         route="Route"
         time="Time of arrivals"
         destination="Destination"
