@@ -18,7 +18,14 @@ interface MapProps {
 }
 
 function Map(props: MapProps) {
-  const { centerX, centerY, zoomLevel, markers, onMarkerClick } = props;
+  const {
+    centerX,
+    centerY,
+    zoomLevel,
+    markers,
+    onViewChange,
+    onMarkerClick
+  } = props;
   const mapRef = useRef<MapType | null>(null);
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -33,6 +40,25 @@ function Map(props: MapProps) {
       ref.current.style.height = '100%';
     }
   }, []);
+  useLayoutEffect(() => {
+    const handler = () => {
+      if (mapRef.current) {
+        const { lat, lng } = mapRef.current.getCenter();
+        const zoomLevel = mapRef.current.getZoom();
+        onViewChange(lat, lng, zoomLevel);
+      }
+    };
+    if (mapRef.current) {
+      mapRef.current.on('zoomend', handler);
+      mapRef.current.on('moveend', handler);
+    }
+    return () => {
+      if (mapRef.current) {
+        mapRef.current.off('zoomend', handler);
+        mapRef.current.off('moveend', handler);
+      }
+    };
+  }, [onViewChange]);
   useLayoutEffect(() => {
     if (mapRef.current) {
       for (let marker of markers) {
