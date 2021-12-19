@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 
 import { HashRouter, Routes, Route } from "react-router-dom";
 
+import AttributionPage from "./AttributionPage";
 import Header from "./Header";
 import MapPage from "./MapPage";
 import Navigation from "./Navigation";
@@ -49,6 +50,9 @@ function App() {
           } />
           <Route path="/result/:stationId" element={
             <ResultPage />
+          } />
+          <Route path="/attribution" element={
+            <AttributionPage />
           } />
         </Routes>
       </HashRouter>

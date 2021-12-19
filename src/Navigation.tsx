@@ -9,6 +9,7 @@ function Navigation() {
     <div className={styles.navigation}>
       <NavigationItem name="Map" path="/" />
       <NavigationItem name="Station List" path="/list" />
+      <NavigationItem name="Attribution" path="/attribution" />
     </div>
   )
 }
