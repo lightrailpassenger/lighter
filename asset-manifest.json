@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/lighter/static/css/main.c822b5bf.chunk.css",
-    "main.js": "/lighter/static/js/main.b0ed89f7.chunk.js",
-    "main.js.map": "/lighter/static/js/main.b0ed89f7.chunk.js.map",
+    "main.js": "/lighter/static/js/main.fe6cb176.chunk.js",
+    "main.js.map": "/lighter/static/js/main.fe6cb176.chunk.js.map",
     "runtime-main.js": "/lighter/static/js/runtime-main.1eb66b9b.js",
     "runtime-main.js.map": "/lighter/static/js/runtime-main.1eb66b9b.js.map",
     "static/js/2.79ea555f.chunk.js": "/lighter/static/js/2.79ea555f.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.1eb66b9b.js",
     "static/js/2.79ea555f.chunk.js",
     "static/css/main.c822b5bf.chunk.css",
-    "static/js/main.b0ed89f7.chunk.js"
+    "static/js/main.fe6cb176.chunk.js"
   ]
 }
