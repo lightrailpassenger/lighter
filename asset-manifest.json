@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/lighter/static/css/main.6b2f2691.chunk.css",
-    "main.js": "/lighter/static/js/main.09a085ff.chunk.js",
-    "main.js.map": "/lighter/static/js/main.09a085ff.chunk.js.map",
+    "main.css": "/lighter/static/css/main.c822b5bf.chunk.css",
+    "main.js": "/lighter/static/js/main.b0ed89f7.chunk.js",
+    "main.js.map": "/lighter/static/js/main.b0ed89f7.chunk.js.map",
     "runtime-main.js": "/lighter/static/js/runtime-main.1eb66b9b.js",
     "runtime-main.js.map": "/lighter/static/js/runtime-main.1eb66b9b.js.map",
-    "static/js/2.8e7113b9.chunk.js": "/lighter/static/js/2.8e7113b9.chunk.js",
-    "static/js/2.8e7113b9.chunk.js.map": "/lighter/static/js/2.8e7113b9.chunk.js.map",
+    "static/js/2.79ea555f.chunk.js": "/lighter/static/js/2.79ea555f.chunk.js",
+    "static/js/2.79ea555f.chunk.js.map": "/lighter/static/js/2.79ea555f.chunk.js.map",
     "index.html": "/lighter/index.html",
-    "static/css/main.6b2f2691.chunk.css.map": "/lighter/static/css/main.6b2f2691.chunk.css.map",
-    "static/js/2.8e7113b9.chunk.js.LICENSE.txt": "/lighter/static/js/2.8e7113b9.chunk.js.LICENSE.txt"
+    "static/css/main.c822b5bf.chunk.css.map": "/lighter/static/css/main.c822b5bf.chunk.css.map",
+    "static/js/2.79ea555f.chunk.js.LICENSE.txt": "/lighter/static/js/2.79ea555f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1eb66b9b.js",
-    "static/js/2.8e7113b9.chunk.js",
-    "static/css/main.6b2f2691.chunk.css",
-    "static/js/main.09a085ff.chunk.js"
+    "static/js/2.79ea555f.chunk.js",
+    "static/css/main.c822b5bf.chunk.css",
+    "static/js/main.b0ed89f7.chunk.js"
   ]
 }
