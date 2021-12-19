@@ -47,7 +47,7 @@
     }));
   }
 
-  const stations = [];
+  const stationIndex = Object.create(null);
   for (let [
     route,
     ,
@@ -56,13 +56,19 @@
     nameCh,
     nameEn,
   ] of routeTable) {
-    stations.push({
-      id: stationId,
+    stationIndex[stationId] = {
       nameCh,
       nameEn,
-      route,
-    });
+      routes: stationIndex[stationId]?.routes ?
+        [...stationIndex[stationId].routes, route] :
+        [route],
+    };
   }
+  const stations = Object.entries(stationIndex)
+    .map(([id, details]) => ({
+      id,
+      ...details,
+    }));
   const geoDataIndex = Object.create(null);
   for (let [
     lat,
@@ -74,5 +80,14 @@
   for (let station of stations) {
     Object.assign(station, geoDataIndex[station.nameEn]);
   }
-  console.log(JSON.stringify(stations));
+  console.log(JSON.stringify(
+    stations.sort(
+      (
+        { nameEn: nameEn1 },
+        { nameEn: nameEn2 }
+      ) => (
+        nameEn1.localeCompare(nameEn2)
+      )
+    )
+  ));
 })();

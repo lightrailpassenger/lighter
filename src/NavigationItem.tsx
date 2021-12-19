@@ -21,7 +21,7 @@ function NavigationItem(props: NavigationItemProps) {
   }, [navigate, path]);
 
   return (
-    <a className={styles.item} href={path} onClick={handleClick}>{name}</a>
+    <a className={styles.item} href={`/#${path}`} onClick={handleClick}>{name}</a>
   );
 }
 

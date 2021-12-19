@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+  height: 35px;
+}
+
+.name {
+  flex: 0 0 auto;
+}
+
+.space {
+  flex: 1 1 0;
+}
+
+.button {
+  color: black;
+  flex: 0 0 auto;
+}
