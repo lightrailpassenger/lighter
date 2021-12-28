@@ -1,10 +1,11 @@
 .row {
   display: flex;
-  height: 35px;
+  height: 40px;
 }
 
 .name {
   flex: 0 0 auto;
+  max-width: 200px;
 }
 
 .space {
