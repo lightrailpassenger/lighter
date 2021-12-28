@@ -65,9 +65,10 @@
     };
   }
   const stations = Object.entries(stationIndex)
-    .map(([id, details]) => ({
+    .map(([id, { routes, ...otherDetails }]) => ({
       id,
-      ...details,
+      routes: [...new Set(routes)],
+      ...otherDetails,
     }));
   const geoDataIndex = Object.create(null);
   for (let [
