@@ -1,3 +1,35 @@
 .page {
-  margin: 0 80px;
+  margin: 0px 80px 5px 80px;
+}
+
+.routeButtonList {
+  display: flex;
+  padding: 10px 0px;
+}
+
+.routeButtonListRouteButton {
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+}
+
+.placeholder {
+  text-align: center;
+}
+
+.actionButton {
+  margin-left: 5px;
+  flex: 0 0 auto;
+}
+
+.routeButton {
+  &__enabled {
+    background: white;
+  }
+  margin: 3px;
+  background: transparent;
+  border: 1px solid black;
+  font-family: 'Fira Sans';
+  font-size: 14px;
+  height: 20px;
+  border-radius: 10px;
 }
