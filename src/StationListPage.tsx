@@ -17,6 +17,7 @@ function StationListPage() {
     .map(([route, status]) => {
       return (
         <button
+          key={route}
           className={`${styles.routeButton}${status ? ` ${styles.routeButton__enabled}` : ''}`}
           onClick={() => {
             setRouteEnabledStatus(({
