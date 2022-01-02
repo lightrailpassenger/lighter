@@ -1,5 +1,7 @@
 import React from "react";
 
+import Twemoji from "./Twemoji";
+
 import styles from "./ResultRow.module.scss";
 
 interface ResultRowProps {
@@ -24,7 +26,9 @@ function ResultRow(props: ResultRowProps) {
       <span className={styles.platformId}>{platformId}</span>
       <span className={styles.route}>{route}{
         typeof trainLength === "number" ?
-          new Array(trainLength).fill(0).map(() => ('\u{1f68b}')).join('') :
+          <Twemoji code={
+            new Array(trainLength).fill(0).map(() => ('\u{1f68b}')).join('')
+          } /> :
           trainLength
       }</span>
       <span className={styles.destination}>{destination}</span>
