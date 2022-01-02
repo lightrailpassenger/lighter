@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/AttributionPage.module.scss"],"names":[],"mappings":"AAAA,6BACE,WAAA,CAOF,qEACE,UAAA","file":"6.c23acdc7.chunk.css","sourcesContent":[".page {\n  height: auto;\n}\n\n.page > ul {\n  color: white;\n}\n\n.page > ul > li > a {\n  color: white;\n}\n"]}
