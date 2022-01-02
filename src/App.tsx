@@ -1,17 +1,19 @@
-import React, { useCallback, useState } from "react";
+import React, { Suspense, useCallback, useState } from "react";
 
 import { HashRouter, Routes, Route } from "react-router-dom";
 
-import AttributionPage from "./AttributionPage";
 import Header from "./Header";
-import MapPage from "./MapPage";
+import LoadingState from "./LoadingState";
 import Navigation from "./Navigation";
-import ResultPage from "./ResultPage";
-import StationListPage from "./StationListPage";
 
 import routeData from "./route_data.json";
 
 import styles from "./App.module.scss";
+
+const AttributionPage = React.lazy(() => import("./AttributionPage"));
+const MapPage = React.lazy(() => import("./MapPage"));
+const ResultPage = React.lazy(() => import("./ResultPage"));
+const StationListPage = React.lazy(() => import("./StationListPage"));
 
 function App() {
   const [mapView, setMapView] = useState<{
@@ -41,20 +43,22 @@ function App() {
       <HashRouter>
         <Header />
         <Navigation />
-        <Routes>
-          <Route path="/" element={
-            <MapPage {...mapView} markers={routeData} onViewChange={handleViewChange} />
-          } />
-          <Route path="/list" element={
-            <StationListPage />
-          } />
-          <Route path="/result/:stationId" element={
-            <ResultPage />
-          } />
-          <Route path="/attribution" element={
-            <AttributionPage />
-          } />
-        </Routes>
+        <Suspense fallback={<LoadingState />}>
+          <Routes>
+            <Route path="/" element={
+              <MapPage {...mapView} markers={routeData} onViewChange={handleViewChange} />
+            } />
+            <Route path="/list" element={
+              <StationListPage />
+            } />
+            <Route path="/result/:stationId" element={
+              <ResultPage />
+            } />
+            <Route path="/attribution" element={
+              <AttributionPage />
+            } />
+          </Routes>
+        </Suspense>
       </HashRouter>
     </div>
   );

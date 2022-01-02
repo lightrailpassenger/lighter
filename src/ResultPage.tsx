@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 
 import { useParams } from "react-router-dom";
 
+import LoadingState from "./LoadingState";
 import ResultRow from "./ResultRow";
 
 import etaResultSchema, { ETAResultType } from "./schemas/ETAResultSchema";
@@ -54,20 +55,22 @@ function ResultPage() {
         destination="Destination"
       />
       {
-      result &&
-      result.platform_list.flatMap(({ platform_id, route_list }) => {
-        return route_list.flatMap(({ train_length, route_no, time_en, dest_en }) => (
-          <ResultRow
-            key={`${platform_id}-${train_length}-${route_no}-${time_en}-${dest_en}`}
-            platformId={platform_id}
-            trainLength={train_length}
-            route={route_no}
-            time={time_en}
-            destination={dest_en}
-          />
-        ));
-      })
-    }</div>
+        result ?
+          result.platform_list.flatMap(({ platform_id, route_list }) => {
+            return route_list.flatMap(({ train_length, route_no, time_en, dest_en }) => (
+              <ResultRow
+                key={`${platform_id}-${train_length}-${route_no}-${time_en}-${dest_en}`}
+                platformId={platform_id}
+                trainLength={train_length}
+                route={route_no}
+                time={time_en}
+                destination={dest_en}
+              />
+            ));
+          }) :
+          <LoadingState />
+      }
+    </div>
   );
 }
 
