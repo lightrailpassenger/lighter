@@ -6,7 +6,7 @@ import routeData from "./route_data.json";
 
 import styles from "./StationListPage.module.scss";
 
-const routeList = ["505", "507", "610", "614", "615", "614P", "615P", "705", "706", "751", "751P", "761P"];
+const routeList = ["505", "507", "610", "614", "615", "614P", "615P", "705", "706", "751", "761P"];
 
 function StationListPage() {
   const [routeEnabledStatus, setRouteEnabledStatus] = useState(() => {
