@@ -1,5 +1,4 @@
 (async () => {
-  const { default: fetch } = await import("node-fetch");
   const { default: xml2js } = await import("xml-js");
   const searchParams = new URLSearchParams();
 
