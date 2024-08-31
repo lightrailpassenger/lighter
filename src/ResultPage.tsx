@@ -19,23 +19,28 @@ function ResultPage() {
   const [result, setResult] = useState<ETAResultType | undefined>();
 
   useEffect(() => {
-    let isIgnored = false;
-    (async () => {
+    const ac = new AbortController();
+    const { signal } = ac;
+    let retryCount = 0;
+    const run = async () => {
       try {
-        const res = await fetch(`${DATA_ENDPOINT}${stationId}`, { mode: 'cors', method: 'GET' });
+        const res = await fetch(`${DATA_ENDPOINT}${stationId}`, { mode: 'cors', method: 'GET', signal });
         const result = await res.json();
         const validatedResult = await etaResultSchema.validate(result);
 
-        if (!isIgnored) {
+        if (!signal.aborted) {
           setResult(validatedResult);
         }
       } catch {
-        window.location.reload();
+        if (retryCount++ < 5) {
+          run();
+        }
       }
-    })();
+    };
+    run();
 
     return () => {
-      isIgnored = true;
+      ac.abort();
     };
   }, [stationId]);
 
