@@ -1,33 +1,33 @@
 {
   "files": {
     "main.css": "/lighter/static/css/main.53f68f87.css",
-    "main.js": "/lighter/static/js/main.c2a5acc2.js",
-    "static/css/328.15853dbb.chunk.css": "/lighter/static/css/328.15853dbb.chunk.css",
+    "main.js": "/lighter/static/js/main.c13d6db7.js",
+    "static/css/328.300906da.chunk.css": "/lighter/static/css/328.300906da.chunk.css",
     "static/js/328.69f2c022.chunk.js": "/lighter/static/js/328.69f2c022.chunk.js",
     "static/css/712.8c972a82.chunk.css": "/lighter/static/css/712.8c972a82.chunk.css",
     "static/js/712.821d065a.chunk.js": "/lighter/static/js/712.821d065a.chunk.js",
     "static/css/415.dc064e5d.chunk.css": "/lighter/static/css/415.dc064e5d.chunk.css",
     "static/js/415.60291387.chunk.js": "/lighter/static/js/415.60291387.chunk.js",
-    "static/css/991.c6bf326c.chunk.css": "/lighter/static/css/991.c6bf326c.chunk.css",
+    "static/css/991.596e6067.chunk.css": "/lighter/static/css/991.596e6067.chunk.css",
     "static/js/991.f3dd96a1.chunk.js": "/lighter/static/js/991.f3dd96a1.chunk.js",
-    "static/js/33.80fef781.chunk.js": "/lighter/static/js/33.80fef781.chunk.js",
+    "static/js/33.8a95f212.chunk.js": "/lighter/static/js/33.8a95f212.chunk.js",
     "static/js/228.df72f9ea.chunk.js": "/lighter/static/js/228.df72f9ea.chunk.js",
     "index.html": "/lighter/index.html",
     "main.53f68f87.css.map": "/lighter/static/css/main.53f68f87.css.map",
-    "main.c2a5acc2.js.map": "/lighter/static/js/main.c2a5acc2.js.map",
-    "328.15853dbb.chunk.css.map": "/lighter/static/css/328.15853dbb.chunk.css.map",
+    "main.c13d6db7.js.map": "/lighter/static/js/main.c13d6db7.js.map",
+    "328.300906da.chunk.css.map": "/lighter/static/css/328.300906da.chunk.css.map",
     "328.69f2c022.chunk.js.map": "/lighter/static/js/328.69f2c022.chunk.js.map",
     "712.8c972a82.chunk.css.map": "/lighter/static/css/712.8c972a82.chunk.css.map",
     "712.821d065a.chunk.js.map": "/lighter/static/js/712.821d065a.chunk.js.map",
     "415.dc064e5d.chunk.css.map": "/lighter/static/css/415.dc064e5d.chunk.css.map",
     "415.60291387.chunk.js.map": "/lighter/static/js/415.60291387.chunk.js.map",
-    "991.c6bf326c.chunk.css.map": "/lighter/static/css/991.c6bf326c.chunk.css.map",
+    "991.596e6067.chunk.css.map": "/lighter/static/css/991.596e6067.chunk.css.map",
     "991.f3dd96a1.chunk.js.map": "/lighter/static/js/991.f3dd96a1.chunk.js.map",
-    "33.80fef781.chunk.js.map": "/lighter/static/js/33.80fef781.chunk.js.map",
+    "33.8a95f212.chunk.js.map": "/lighter/static/js/33.8a95f212.chunk.js.map",
     "228.df72f9ea.chunk.js.map": "/lighter/static/js/228.df72f9ea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.53f68f87.css",
-    "static/js/main.c2a5acc2.js"
+    "static/js/main.c13d6db7.js"
   ]
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/328.300906da.chunk.css","mappings":"AAAA,6BACE,YAGF,gCACE,WAGF,qCACE","sources":["AttributionPage.module.scss"],"sourcesContent":[".page {\n  height: auto;\n}\n\n.page > ul {\n  color: white;\n}\n\n.page > ul > li > a {\n  color: white;\n}\n"],"names":[],"sourceRoot":""}
